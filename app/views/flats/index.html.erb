@@ -1,0 +1,17 @@
+
+<div class="container">
+  <h1>Il est temps de souffler, surtout a ce prix là🍀</h1>
+<div class="row">
+  <% @flats.each do |flat| %>
+  <div class="card col-4 text-center " >
+    <h2><%= flat.name %></h2>
+     <h4><%= flat.address %></h4>
+    <div class="add">
+      <%= link_to "Add", new_flat_path %>
+      <%= link_to "More Info", flat_path(flat) %>
+    </div>
+  </div>
+  <% end %>
+</div>
+</div>
+

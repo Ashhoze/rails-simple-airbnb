@@ -1,0 +1,40 @@
+<div class="map" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')"></div>
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-8">
+      <div class="flat-show">
+        <h1> <%= @flat.name %> </h1>
+        <p><%= @flat.address %> </p>
+      </div>
+      <div class="flat-show">
+        <h3><%= @flat.description %> </h3>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="flat-show">
+        <h5>Reserve vite!</h5>
+        <form action>
+          <div class="input-group mt-2">
+            <span>From:</span>
+            <input type="text" class="form-control">
+            <div class="input-group mt-2">
+            <span>To:</span>
+            <input type="text" class="form-control">
+          </div>
+          <input type="submit" value="reserve" class="btn btn-success mt-2" style="width:100%">
+        </form>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<%= link_to "back to the list", flats_path %>
+<%= link_to "edit the flat?", edit_flat_path(@flat) %>
+<%= link_to "Delete #{@flat.name}",
+            flat_path(@flat),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
